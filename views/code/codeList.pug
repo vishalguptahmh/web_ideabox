@@ -1,0 +1,19 @@
+block content
+    h3 Ideas posted by Others
+    if MyList.length
+        for list in MyList
+            .customCard2
+                .row
+                    .col-md-12.margintop8
+                        h5='IDEA : '+list.comment
+                .row
+
+
+                    .col-md-12.margintop8
+                        p(style='text-align-last: end;')='By: '+list.profile.name+', Email : '+list.profile.email+', Gender : '+list.profile.gender+', Location : '+list.profile.location+', Time : '+ list.createdAt
+                //- tr
+                //-     td=list.code
+                //-     td=list.description
+    else 
+        .customCard
+            P No Data found
